@@ -1,0 +1,7 @@
+<h1><%= t('users.recharge.header') %></h1>
+<%= form_tag :action => :recharge_post do %>
+    <input type="number" name="amount" placeholder="<%= t('users.recharge.amount') %>" />
+    <input type="submit" value="<%= t('users.recharge.go') %>!" />
+<% end %>
+
+<%= link_to t('users.recharge.home'), home_path %>

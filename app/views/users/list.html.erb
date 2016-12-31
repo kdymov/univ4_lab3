@@ -1,0 +1,42 @@
+<h1><%= t('users.list.header') %></h1>
+<table>
+  <thead>
+    <tr>
+      <td><%= t('users.list.fullname') %></td>
+      <td><%= t('users.list.login') %></td>
+      <td><%= t('users.list.phone') %></td>
+      <td><%= t('users.list.is_blocked') %></td>
+      <td><%= t('users.list.balance') %></td>
+      <td><%= t('users.list.last') %></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |u| %>
+      <tr>
+        <td><%= u.fullname %></td>
+        <td><%= u.login %></td>
+        <td><%= u.phone %></td>
+        <td>
+          <% if u.is_blocked %>
+              <%= t('users.list.blocked') %>
+          <% end %>
+        </td>
+        <td><%= u.balance %></td>
+        <td><%= u.updated_at %></td>
+        <td>
+          <% if u.balance >= u.tariff.cost %>
+            <%= link_to t('users.list.payment'), payment_path(u.id) %>
+          <% else %>
+            <% if u.is_blocked %>
+              <%= link_to t('users.list.unblock'), unblock_path(u.id) %>
+            <% else %>
+              <%= link_to t('users.list.block'), block_path(u.id) %>
+            <% end %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('users.list.home'), home_path %>

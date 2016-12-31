@@ -1,0 +1,22 @@
+<h1><%= t('users.change.header') %></h1>
+<table>
+  <thead>
+    <tr>
+      <td><%= t('users.change.name') %></td>
+      <td><%= t('users.change.desc') %></td>
+      <td><%= t('users.change.cost') %></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tariffs.each do |t| %>
+      <tr>
+        <td><strong><%= t.name %></strong></td>
+        <td><%= t.description %></td>
+        <td><%= t.cost %></td>
+        <td><%= link_to t('users.change.select'), change_post_path(t.id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('users.change.home'), home_path %>

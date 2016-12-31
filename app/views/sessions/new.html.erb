@@ -1,0 +1,8 @@
+<h1><%= t('sessions.new.header') %></h1>
+<%= form_tag :action => :create do %>
+    <input type="text" name="login" placeholder="<%= t('sessions.new.login') %>" />
+    <input type="password" name="password" placeholder="<%= t('sessions.new.password') %>" />
+    <input type="submit" value="<%= t('sessions.new.sign_in') %>" />
+<% end %>
+
+<%= link_to t('sessions.new.register_link'), register_path %>

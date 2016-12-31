@@ -1,0 +1,10 @@
+<h1><%= t('users.new.header') %></h1>
+<%= form_tag :action => :create do %>
+    <input type="text" name="login" placeholder="<%= t('users.new.login') %>" />
+    <input type="password" name="password" placeholder="<%= t('users.new.password') %>" />
+    <input type="text" name="fullname" placeholder="<%= t('users.new.fullname') %>" />
+    <input type="text" name="phone" maxlength="13" placeholder="<%= t('users.new.phone') %>" />
+    <input type="submit" value="<%= t('users.new.register') %>" />
+<% end %>
+
+<%= link_to t('users.new.login_link'), login_path %>

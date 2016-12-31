@@ -1,0 +1,74 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  users:
+    home:
+      admin: Administrator
+      client: Client
+      blocked: YOU ARE BLOCKED! YOU CANNOT CALL!
+      login: Login
+      tariff: Tariff
+      balance: Balance
+      change: Change
+      recharge: Recharge
+      users: Users
+      logout: Log out
+    new:
+      header: Register form
+      login: Login
+      password: Password
+      fullname: Full name
+      phone: Phone
+      register: Register
+      login_link: Go to login form
+    change:
+      header: Change your tariff
+      name: Name
+      desc: Description
+      cost: Cost UAH/month
+      select: Select
+      home: Home
+    recharge:
+      header: Recharge
+      amount: Amount
+      go: Go
+      home: Home
+    list:
+      header: Users list
+      fullname: Full name
+      login: Login
+      phone: Phone
+      is_blocked: Is blocked
+      balance: Balance
+      last: Last recharge
+      payment: Take payment
+      unblock: Unblock
+      block: Block
+      home: Home
+      blocked: Blocked
+  sessions:
+    new:
+      header: Login form
+      login: Login
+      password: Password
+      sign_in: Sign in
+      register_link: Go to register form

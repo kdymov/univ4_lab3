@@ -1,0 +1,38 @@
+<h1>
+  <% if @user.is_admin %>
+    <%= t('users.home.admin') %>
+  <% else %>
+    <%= t('users.home.client') %>
+  <% end %>
+  <%= @user.fullname %>
+</h1>
+<h2><%= @user.phone %></h2>
+<% if @user.is_blocked %>
+  <h3 style="color: darkred"><%= t('users.home.blocked') %></h3>
+<% end %>
+<table>
+  <tbody>
+    <tr>
+      <td><%= t('users.home.login') %>:</td>
+      <td><span style="color: midnightblue"><%= @user.login %></span></td>
+    </tr>
+    <tr>
+      <td><%= t('users.home.tariff') %>:</td>
+      <td><span style="color: midnightblue"><%= @tariff.name %></span></td>
+      <td><%= link_to t('users.home.change'), change_path %></td>
+    </tr>
+    <tr>
+      <td><%= t('users.home.balance') %>:</td>
+      <td><span style="color: midnightblue"><%= @user.balance %></span></td>
+      <td><%= link_to t('users.home.recharge'), recharge_path %></td>
+    </tr>
+    <% if @user.is_admin %>
+      <tr>
+        <td><%= link_to t('users.home.users'), users_list_path %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to t('users.home.logout'), logout_path %>

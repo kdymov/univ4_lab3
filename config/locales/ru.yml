@@ -1,0 +1,74 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+ru:
+  users:
+    home:
+      admin: Администратор
+      client: Клиент
+      blocked: ВЫ ЗАБЛОКИРОВАННЫ! ВЫ НЕ МОЖЕТЕ СОВЕРШАТЬ ЗВОНКИ!
+      login: Логин
+      tariff: Тариф
+      balance: Баланс
+      change: Изменить
+      recharge: Пополнить
+      users: Список пользователей
+      logout: Выйти
+    new:
+      header: Форма регистрации
+      login: Логин
+      password: Пароль
+      fullname: Полное имя
+      phone: Телефон
+      register: Зарегистрироваться
+      login_link: Перейти к форме входа
+    change:
+      header: Изменение тарифа
+      name: Название
+      desc: Описание
+      cost: Стоимость, грн/мес
+      select: Выбрать
+      home: Домой
+    recharge:
+      header: Пополнить
+      amount: Сумма
+      go: Вперед
+      home: Домой
+    list:
+      header: Список пользователей
+      fullname: Полное имя
+      login: Логин
+      phone: Телефон
+      is_blocked: Статус блокировки
+      balance: Баланс
+      last: Последнее пополнение
+      payment: Снять деньги
+      unblock: Разблокировать
+      block: Заблокриовать
+      home: Домой
+      blocked: Заблокирован
+  sessions:
+    new:
+      header: Форма входа
+      login: Логин
+      password: Пароль
+      sign_in: Войти
+      register_link: Перейти к форме регистрации
